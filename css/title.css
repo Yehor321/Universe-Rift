@@ -1,0 +1,29 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+.Main_text .All_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main_text .All_button a {
+    text-decoration: none;
+    margin: 3%;
+}
+.button_size {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 70px;
+    transition: 0.5s;
+}
+@media screen and (max-width: 1200px) {
+    .All_button {
+        flex-direction: column;
+        transform: scale(0.8);
+      }
+}

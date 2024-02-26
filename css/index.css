@@ -1,0 +1,30 @@
+  body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url(/imges/footer-pattern.png);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/imges/background_main.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.contacts {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 10px; /* Задайте желаемый отступ снизу */
+  transform: translateX(-50%);
+}
+.contacts a {
+  margin: 0 15px; /* Добавьте отступ между контактами */
+}
+.contacts img {
+  width: 35px;
+  height: 35px;
+}

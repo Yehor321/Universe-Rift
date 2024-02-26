@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --index: calc(1vw + 1vh)
+    --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+.layers {
+    perspective: 1500px;
+    overflow: hidden;
+}
+.layers__container {
+    height: 100vh;
+    transform-style: preserve-3d; 
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x)); 
+    will-change: transform;
+    transition: transform var(--transition) ;
+}
+.layers__item {
+    position: absolute;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+}
+.layer-1 {
+    transform: translateZ(-50px) scale(1.4);
+}
+.layer-2 {
+    transform: translateZ(80px) scale(0.8);
+}
+.layer-3 {
+    transform: translateZ(80px) scale(0.8);
+}
+.layer-4 {
+    transform: translateZ(120px) scale(0.8);
+}
+.layer-5 {
+    transform: translateZ(300px) scale(0.8);
+}
+.layer-6 {
+    opacity: 0.7;
+    transform: translateZ(400px) scale(0.8);
+}
+.layer-7 {
+    opacity: 1;
+    transform: translateZ(450px) scale(0.8);
+}
+.layer-8 {
+    opacity: 1;
+    transform: translateZ(450px) scale(0.8);
+}
+button {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -20%);
+
+    background-color: transparent;
+    margin: 10px;
+    min-width: 5%;
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 0.8);
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 10px 50px;
+    color: white;
+    border-radius: 10em;
+    border: rgb(172, 151, 151) solid;
+    transition: 0.5s;
+}
+.button:hover {
+    border: white solid;
+}
